@@ -380,7 +380,7 @@ document.querySelectorAll('#mtx th[data-k]').forEach(th=>th.addEventListener('cl
     const nA=parseFloat(A),nB=parseFloat(B);
     if(!isNaN(nA)&&!isNaN(nB))return (nA-nB)*d;return A.localeCompare(B)*d;});
   rs.forEach(r=>tb.appendChild(r));
-});
+}));
 apply();
 </script>
 </div></body></html>"""
