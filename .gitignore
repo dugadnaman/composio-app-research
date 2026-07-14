@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# API keys & Credentials
+.env
+.env.*
+service_account.json
+*.pem
+*.key

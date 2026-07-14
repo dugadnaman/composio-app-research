@@ -1,0 +1,159 @@
+{
+  "n": 100,
+  "auth": {
+    "OAuth2": 62,
+    "API key": 44,
+    "Token": 42,
+    "Basic": 14,
+    "None / n/a": 2,
+    "Other": 1
+  },
+  "auth_note": "OAuth2 in 62/100; API-key/token/basic in most as well (apps overlap).",
+  "access": {
+    "Self-serve free": 57,
+    "Self-serve trial": 23,
+    "Admin / app review": 8,
+    "Partner / contact-sales": 7,
+    "Paid plan required": 4,
+    "Unknown": 1
+  },
+  "self_serve_n": 80,
+  "gated_n": 20,
+  "by_category": {
+    "Developer, Infra and Data platforms": {
+      "total": 10,
+      "self_serve": 10,
+      "gated": 0,
+      "self_serve_pct": 100.0
+    },
+    "Productivity and Project Management": {
+      "total": 10,
+      "self_serve": 10,
+      "gated": 0,
+      "self_serve_pct": 100.0
+    },
+    "CRM and Sales": {
+      "total": 10,
+      "self_serve": 9,
+      "gated": 1,
+      "self_serve_pct": 90.0
+    },
+    "Support and Helpdesk": {
+      "total": 10,
+      "self_serve": 9,
+      "gated": 1,
+      "self_serve_pct": 90.0
+    },
+    "Communications and Messaging": {
+      "total": 10,
+      "self_serve": 9,
+      "gated": 1,
+      "self_serve_pct": 90.0
+    },
+    "Ecommerce": {
+      "total": 10,
+      "self_serve": 8,
+      "gated": 2,
+      "self_serve_pct": 80.0
+    },
+    "Data, SEO and Scraping": {
+      "total": 10,
+      "self_serve": 7,
+      "gated": 3,
+      "self_serve_pct": 70.0
+    },
+    "Finance and Fintech": {
+      "total": 10,
+      "self_serve": 7,
+      "gated": 3,
+      "self_serve_pct": 70.0
+    },
+    "AI, Research and Media-native": {
+      "total": 10,
+      "self_serve": 6,
+      "gated": 4,
+      "self_serve_pct": 60.0
+    },
+    "Marketing, Ads, Email and Social": {
+      "total": 10,
+      "self_serve": 5,
+      "gated": 5,
+      "self_serve_pct": 50.0
+    }
+  },
+  "buildability": {
+    "Ready": 77,
+    "Ready but gated": 18,
+    "Partial": 4,
+    "Unknown": 1
+  },
+  "blockers": {
+    "Partnership / sales / enterprise": 8,
+    "Other": 7,
+    "No/limited public API": 6,
+    "App review / verification": 5,
+    "Paid plan / credits": 4
+  },
+  "mcp": {
+    "No MCP": 43,
+    "Community MCP": 31,
+    "Official MCP": 25,
+    "Unknown": 1
+  },
+  "any_mcp": 56,
+  "official_mcp": 25,
+  "composio_supported": 55,
+  "easy_wins": [
+    "Aircall",
+    "Binance",
+    "Bright Data",
+    "Copper",
+    "DataForSEO",
+    "Ecwid",
+    "Fathom",
+    "GoHighLevel",
+    "Grain",
+    "Harvest",
+    "Lark (Larksuite)",
+    "LiveAgent",
+    "Magento (Adobe Commerce)",
+    "MrScraper",
+    "Neo4j",
+    "Plain",
+    "Podio",
+    "Pylon",
+    "Reducto",
+    "Twenty",
+    "Vonage",
+    "Waterfall.io",
+    "YouTube Transcript",
+    "fanbasis",
+    "higgsfield",
+    "systeme.io"
+  ],
+  "needs_outreach": [
+    "Amazon Selling Partner",
+    "Clay",
+    "Consensus",
+    "DealCloud",
+    "Gladly",
+    "Google Ads",
+    "LinkedIn Ads",
+    "Meta Ads",
+    "NotebookLM",
+    "Paygent Connect",
+    "Pinterest",
+    "PitchBook",
+    "Salesforce Commerce Cloud",
+    "Threads (Meta)",
+    "WhatsApp Business"
+  ],
+  "already_covered_ready": 50,
+  "headline": [
+    "62.0% of the 100 support OAuth2 and 85.0% offer a key/token/basic path (50 support both) \u2014 auth is rarely the real blocker.",
+    "80.0% are self-serve (free or trial); only 20.0% are gated behind paid plans, app review, or a partnership/sales motion.",
+    "77 of 100 are build-ready today. The gated 18 are blocked by access, not by API quality.",
+    "The dominant blocker is 'Partnership / sales / enterprise' (8 apps) \u2014 an approvals/partnership problem, not a technical one.",
+    "26 apps are easy wins: Ready + self-serve + not yet a Composio toolkit. Gated/enterprise apps (15) are the outreach list."
+  ]
+}

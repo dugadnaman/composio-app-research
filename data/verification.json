@@ -1,0 +1,482 @@
+{
+  "method": "Automated critic loop over all 100 (doc-grounding re-check) plus a 23-app stratified human spot-check (>=2 per category), graded per field against live documentation.",
+  "critic_loop": {
+    "total": 100,
+    "grounded_against_live_docs": 100,
+    "rows_corrected_by_critic": 13,
+    "field_change_counts": {
+      "buildability": 12,
+      "access_model": 11,
+      "mcp": 4,
+      "auth_methods": 3,
+      "api_breadth": 2
+    },
+    "avg_confidence": 0.833,
+    "low_confidence_rows": [
+      "iPayX"
+    ]
+  },
+  "sample_check": {
+    "sample_size": 23,
+    "fields_graded_per_row": [
+      "auth_methods",
+      "access_model",
+      "api_breadth",
+      "mcp",
+      "buildability"
+    ],
+    "accuracy_pass1_pct": 71.3,
+    "accuracy_pass2_pct": 96.5,
+    "remaining_misses": [
+      {
+        "id": 85,
+        "name": "iPayX",
+        "fields": [
+          "auth_methods",
+          "access_model",
+          "mcp",
+          "buildability"
+        ]
+      }
+    ]
+  },
+  "sample_rows": [
+    {
+      "id": 1,
+      "name": "Salesforce",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "MCP status was the only first-pass miss (community, not none)."
+    },
+    {
+      "id": 10,
+      "name": "DealCloud",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "First pass assumed self-serve; docs show admin-provisioned creds."
+    },
+    {
+      "id": 11,
+      "name": "Zendesk",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 20,
+      "name": "Gladly",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Enterprise sales-gated; first pass called it self-serve."
+    },
+    {
+      "id": 21,
+      "name": "Slack",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 25,
+      "name": "Pumble",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": false,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "First pass overstated API breadth vs Slack."
+    },
+    {
+      "id": 35,
+      "name": "Mailchimp",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 33,
+      "name": "LinkedIn Ads",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Missed the Marketing Developer Program partner gate."
+    },
+    {
+      "id": 41,
+      "name": "Shopify",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 50,
+      "name": "fanbasis",
+      "pass1": {
+        "auth_methods": false,
+        "access_model": false,
+        "api_breadth": false,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Unknown at first; grounding found API key + HMAC webhooks."
+    },
+    {
+      "id": 56,
+      "name": "Firecrawl",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 60,
+      "name": "Clay",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": false,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Big fix: Clay has no true public REST API (Enterprise/webhooks)."
+    },
+    {
+      "id": 61,
+      "name": "GitHub",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 66,
+      "name": "Neo4j",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "MCP status corrected (community exists)."
+    },
+    {
+      "id": 71,
+      "name": "Notion",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 79,
+      "name": "Smartsheet",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 81,
+      "name": "Stripe",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Correct on both passes."
+    },
+    {
+      "id": 90,
+      "name": "PitchBook",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Missed both the contract gate and the MCP Premium Connector."
+    },
+    {
+      "id": 85,
+      "name": "iPayX",
+      "pass1": {
+        "auth_methods": false,
+        "access_model": false,
+        "api_breadth": false,
+        "mcp": false,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": false,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": false
+      },
+      "note": "STILL UNRESOLVED after grounding: no verifiable docs at ipayx.ai."
+    },
+    {
+      "id": 92,
+      "name": "Otter AI",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Missed enterprise gate + official MCP server."
+    },
+    {
+      "id": 91,
+      "name": "NotebookLM",
+      "pass1": {
+        "auth_methods": false,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": false
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "First pass assumed a self-serve API; it is Gemini-Enterprise only."
+    },
+    {
+      "id": 94,
+      "name": "Consensus",
+      "pass1": {
+        "auth_methods": true,
+        "access_model": false,
+        "api_breadth": true,
+        "mcp": false,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Missed application gate + official MCP."
+    },
+    {
+      "id": 97,
+      "name": "higgsfield",
+      "pass1": {
+        "auth_methods": false,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "pass2": {
+        "auth_methods": true,
+        "access_model": true,
+        "api_breadth": true,
+        "mcp": true,
+        "buildability": true
+      },
+      "note": "Auth corrected: key+secret SDK / browser-OAuth CLI."
+    }
+  ]
+}

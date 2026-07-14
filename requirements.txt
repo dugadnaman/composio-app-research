@@ -1,0 +1,15 @@
+# Core
+pydantic>=2.6
+pyyaml>=6.0
+requests>=2.31
+beautifulsoup4>=4.12
+
+# LLM backends (pick one; both optional at runtime)
+google-genai>=0.3        # free-tier default backend
+anthropic>=0.40          # optional alternative backend
+
+# Buildability cross-check (optional)
+composio>=0.5            # Composio SDK: is there already a toolkit?
+
+# Nice-to-have: JS-heavy docs pages (optional, free tier)
+# firecrawl-py>=1.0
