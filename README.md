@@ -3,7 +3,7 @@
 This repository contains the autonomous research agent, findings dataset, pattern analysis, and the generated case study for evaluating the buildability of agent toolkits across 100 applications in 10 categories.
 
 ## Case Study Deliverable
-The compiled case study is available locally at [site/index.html](site/index.html).
+The compiled case study is available locally at [docs/index.html](docs/index.html).
 
 ### Summary Takeaway
 1. **Auth is Solved**: 85% of apps offer API keys, personal access tokens, or Basic Auth, and 62% support OAuth2.
@@ -24,14 +24,14 @@ composio-app-research/
 │   └── web.py              # Document fetching and BeautifulSoup cleaning helper
 ├── analysis/
 │   ├── __init__.py
-│   └── patterns.py         # Aggregates findings into pattern stats for site/
+│   └── patterns.py         # Aggregates findings into pattern stats for docs/
 ├── data/
 │   ├── findings.json       # All 100 app findings (resumable, cached dataset)
 │   ├── patterns.json       # Aggregated stats and headlines
 │   ├── seed.py             # Script to initialize seed data
 │   ├── verification.json   # 23-app hand-checked sample accuracy metrics
 │   └── verification_build.py # Builds the verification dataset
-├── site/
+├── docs/
 │   ├── index.html          # Self-contained case study page
 │   └── build.py            # Site generator script (embeds JSONs into HTML template)
 ├── apps.yaml               # Original 100-app input list
@@ -96,8 +96,8 @@ python data/verification_build.py
 # 2. Update pattern analyses
 python analysis/patterns.py
 
-# 3. Compile data into site/index.html
-python site/build.py
+# 3. Compile data into docs/index.html
+python docs/build.py
 ```
 
 ---
@@ -108,5 +108,5 @@ To deploy the case study to GitHub Pages:
 2. Go to **Settings** $\rightarrow$ **Pages** on your repository on GitHub.
 3. Under **Build and deployment** $\rightarrow$ **Branch**:
    - Select `main`.
-   - Select the `/site` folder as the source directory instead of root `/`.
-4. Save the configuration. GitHub will deploy `site/index.html` as the root of your Pages site.
+   - Select the `/docs` folder as the source directory instead of root `/`.
+4. Save the configuration. GitHub will deploy `docs/index.html` as the root of your Pages site.

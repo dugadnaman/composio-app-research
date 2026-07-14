@@ -1,11 +1,11 @@
-"""Render the single self-contained case-study page: site/index.html.
+"""Render the single self-contained case-study page: docs/index.html.
 
 Reads data/{findings,patterns,verification}.json and emits ONE html file with
 all data embedded (no network calls, no build step for the reviewer). The page
 is designed to be understood in ~2 minutes: headline patterns first, then the
 skimmable 100-app matrix, then the agent, the proof, and the verification.
 
-Run:  python site/build.py  ->  writes site/index.html
+Run:  python docs/build.py  ->  writes docs/index.html
 """
 from __future__ import annotations
 
@@ -281,7 +281,7 @@ Rows the agent is unsure about are marked <span style="color:var(--warn)">⚠</s
       <small>Model re-reads the page, corrects fields, self-rates confidence. Thin/blocked page → confidence drops.</small></div>
   </div>
   <p class="note">Every row is coerced through a Pydantic schema, and Composio coverage is
-  cross-checked via the Composio SDK (or an offline seed set). Model-agnostic backend: Gemini (free) or Claude.</p>
+  cross-checked via a static seed list of known Composio slugs, not a live SDK query. Model-agnostic backend: Gemini (free) or Claude.</p>
   <h3>Stack</h3>
   <p class="mono" style="color:var(--mut)">Python · Pydantic · requests/bs4 · google-genai | anthropic · Composio SDK · vanilla-JS page</p>
  </div>
@@ -312,7 +312,7 @@ python -m agent.run                  # all 100 (resumable, cached)
 # rebuild the artifacts:
 python data/verification_build.py
 python analysis/patterns.py
-python site/build.py                 # -> this page</code></pre>
+python docs/build.py                 # -> this page</code></pre>
   <p class="note">Runnable trigger: <code>python -m agent.run --ids &lt;n&gt;</code> researches any app live and appends a schema-valid row.</p>
   </div>
   <div class="panel"><h3>What's in the repo</h3>
@@ -320,10 +320,10 @@ python site/build.py                 # -> this page</code></pre>
     <li><code>agent/</code> — llm (pluggable), research (draft→ground→confirm), verify, run (orchestrator)</li>
     <li><code>schema.py</code> — the controlled vocab that makes patterns possible</li>
     <li><code>data/</code> — findings, patterns, verification (all JSON)</li>
-    <li><code>analysis/patterns.py</code> · <code>site/build.py</code></li>
+    <li><code>analysis/patterns.py</code> · <code>docs/build.py</code></li>
     <li><a href="__REPO__">Source repo + README →</a></li>
    </ul>
-   <p class="note">Live page: deploy <code>site/index.html</code> to GitHub Pages (static, self-contained).</p>
+   <p class="note">Live page: deploy <code>docs/index.html</code> to GitHub Pages (static, self-contained).</p>
   </div>
 </div>
 
@@ -426,5 +426,5 @@ def render() -> str:
 
 
 if __name__ == "__main__":
-    (ROOT / "site" / "index.html").write_text(render())
-    print(f"Wrote site/index.html ({len((ROOT/'site'/'index.html').read_text()):,} bytes)")
+    (ROOT / "docs" / "index.html").write_text(render())
+    print(f"Wrote docs/index.html ({len((ROOT/'docs'/'index.html').read_text()):,} bytes)")
