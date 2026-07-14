@@ -281,7 +281,7 @@ Rows the agent is unsure about are marked <span style="color:var(--warn)">⚠</s
       <small>Model re-reads the page, corrects fields, self-rates confidence. Thin/blocked page → confidence drops.</small></div>
   </div>
   <p class="note">Every row is coerced through a Pydantic schema, and Composio coverage is
-  cross-checked via a static seed list of known Composio slugs, not a live SDK query. Model-agnostic backend: Gemini (free) or Claude.</p>
+  checked against a static seed list of known Composio slugs, not a live SDK query. Model-agnostic backend: Gemini (free) or Claude.</p>
   <h3>Stack</h3>
   <p class="mono" style="color:var(--mut)">Python · Pydantic · requests/bs4 · google-genai | anthropic · Composio SDK · vanilla-JS page</p>
  </div>
