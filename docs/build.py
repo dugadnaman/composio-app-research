@@ -312,7 +312,7 @@ python -m agent.run                  # all 100 (resumable, cached)
 # rebuild the artifacts:
 python data/verification_build.py
 python analysis/patterns.py
-python docs/build.py                 # -> this page</code></pre>
+python docs/build.py                 # -&gt; this page</code></pre>
   <p class="note">Runnable trigger: <code>python -m agent.run --ids &lt;n&gt;</code> researches any app live and appends a schema-valid row.</p>
   </div>
   <div class="panel"><h3>What's in the repo</h3>
